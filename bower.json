@@ -1,15 +1,13 @@
 {
   "name": "Farm_Build_Nutrient_Calculator_Prototype",
-  "description": "A starter project for AngularJS",
+  "description": "This project is a prototype application to show the complete cycle of development, test and qa in farm build project",
   "version": "0.0.0",
   "homepage": "https://github.com/SpatialVision/farm-build-nutrient-calculator",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "1.2.x",
-    "angular-route": "1.2.x",
-    "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
-    "html5-boilerplate": "~4.3.0"
+    "bootstrap": "^3.2.0"
   }
 }
