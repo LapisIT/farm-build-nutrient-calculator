@@ -32,7 +32,7 @@ angular.module('farmBuildNutrientCalculator')
 		 * @param {number} milkProteinInKg - Quantity of milk protein in Kilograms.
 		 * @returns {object} milk nutrient data
 		 */
-		function nutrientOfMilkSoldByKg(milkSoldPerYearInLitre, milkFatInKg, milkProteinInKg) {
+		function nutrientOfMilkSoldByKg(milkSoldPerYearInLitre, milkProteinInKg, milkFatInKg) {
 			var milkProteinPercentage, milkFatPercentage;
 
 			if (!milkSoldPerYearInLitre || !milkFatInKg || !milkProteinInKg) {

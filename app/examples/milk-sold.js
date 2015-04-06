@@ -25,8 +25,8 @@ angular.module('farmBuildNutrientCalculator')
 				$scope.milkProteinInKg = $scope.result.milkProteinInKg;
 			}
 		};
-		$scope.nutrientOfMilkSoldByKg = function (milkSoldPerYearInLitre, milkFatInKg, milkProteinInKg) {
-			$scope.result = MilkSold.nutrientOfMilkSoldByKg(milkSoldPerYearInLitre, milkFatInKg, milkProteinInKg);
+		$scope.nutrientOfMilkSoldByKg = function (milkSoldPerYearInLitre, milkProteinInKg, milkFatInKg) {
+			$scope.result = MilkSold.nutrientOfMilkSoldByKg(milkSoldPerYearInLitre, milkProteinInKg, milkFatInKg);
 			if ($scope.result) {
 				$scope.milkFatPercentage = $scope.result.milkFatPercentage;
 				$scope.milkProteinPercentage = $scope.result.milkProteinPercentage;
