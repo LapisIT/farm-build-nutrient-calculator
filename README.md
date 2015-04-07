@@ -5,7 +5,10 @@ This project is a prototype application to show the complete cycle of developmen
 
 ## Getting Started
 
-To get you started you can simply clone the Farm Build Nutrient Calculator Prototype repository and open one of the html files in example folder
+To get you started simply download this repository using "Download Zip" on the right side of this page. Unzip the downloaded folder and navigate to "app > examples" and open "milk-sold.html"
+in a browser (preferably chrome or firefox).
+
+If you want to run tests you need to clone the Farm Build Nutrient Calculator Prototype repository and follow the rest of this instruction.
 
 ### Prerequisites
 
