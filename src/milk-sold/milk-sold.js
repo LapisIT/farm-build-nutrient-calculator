@@ -23,6 +23,10 @@ angular.module('farmBuildNutrientCalculator')
 				return;
 			}
 
+			if(!isNumber(milkSoldPerYearInLitre) || !isNumber(milkProteinPercentage) || !isNumber(milkFatPercentage)){
+				return;
+			}
+
 			if(milkProteinPercentage + milkFatPercentage > 100){
 				return;
 			}
@@ -44,6 +48,10 @@ angular.module('farmBuildNutrientCalculator')
 			var milkProteinPercentage, milkFatPercentage;
 
 			if (!milkSoldPerYearInLitre || !milkFatInKg || !milkProteinInKg) {
+				return;
+			}
+
+			if(!isNumber(milkSoldPerYearInLitre) || !isNumber(milkProteinInKg) || !isNumber(milkFatInKg)){
 				return;
 			}
 
@@ -71,25 +79,25 @@ angular.module('farmBuildNutrientCalculator')
 			var nitrogenPercentage = milkProteinPercentage / 6.33,
 				phosphorusPercentage = (0.0111 * milkFatPercentage + 0.05255),
 				potassiumPercentage = 0.14, sulphurPercentage = 0.06,
-				nitrogenInKg = (milkSoldPerYearInLitre * nitrogenPercentage / 100).toFixed(0),
-				potassiumInKg = (milkSoldPerYearInLitre * potassiumPercentage / 100).toFixed(0),
-				sulphurInKg = (milkSoldPerYearInLitre * sulphurPercentage / 100).toFixed(0),
-				phosphorusInKg = (milkSoldPerYearInLitre * phosphorusPercentage / 100).toFixed(0);
+				nitrogenInKg = (milkSoldPerYearInLitre * nitrogenPercentage / 100),
+				potassiumInKg = (milkSoldPerYearInLitre * potassiumPercentage / 100),
+				sulphurInKg = (milkSoldPerYearInLitre * sulphurPercentage / 100),
+				phosphorusInKg = (milkSoldPerYearInLitre * phosphorusPercentage / 100);
 
 			return {
-				milkSoldPerYearInLitre: milkSoldPerYearInLitre,
-				milkFatInKg: milkFatInKg,
-				milkFatPercentage: milkFatPercentage,
-				milkProteinInKg: milkProteinInKg,
-				milkProteinPercentage: milkProteinPercentage,
-				nitrogenInKg: nitrogenInKg,
-				nitrogenPercentage: nitrogenPercentage,
-				phosphorusInKg: phosphorusInKg,
-				phosphorusPercentage: phosphorusPercentage,
-				potassiumInKg: potassiumInKg,
-				potassiumPercentage: potassiumPercentage,
-				sulphurInKg: sulphurInKg,
-				sulphurPercentage: sulphurPercentage
+				milkSoldPerYearInLitre: milkSoldPerYearInLitre.toFixed(2),
+				milkFatInKg: milkFatInKg.toFixed(2),
+				milkFatPercentage: milkFatPercentage.toFixed(2),
+				milkProteinInKg: milkProteinInKg.toFixed(2),
+				milkProteinPercentage: milkProteinPercentage.toFixed(2),
+				nitrogenInKg: nitrogenInKg.toFixed(2),
+				nitrogenPercentage: nitrogenPercentage.toFixed(2),
+				phosphorusInKg: phosphorusInKg.toFixed(2),
+				phosphorusPercentage: phosphorusPercentage.toFixed(2),
+				potassiumInKg: potassiumInKg.toFixed(2),
+				potassiumPercentage: potassiumPercentage.toFixed(2),
+				sulphurInKg: sulphurInKg.toFixed(2),
+				sulphurPercentage: sulphurPercentage.toFixed(2)
 			};
 
 		}
@@ -112,6 +120,15 @@ angular.module('farmBuildNutrientCalculator')
 		 */
 		function percentageToKg(valuePercentage, totalInLitre) {
 			return (valuePercentage * totalInLitre) / 100;
+		}
+
+		/**
+		 * Returns true if value is a number
+		 * @param {number} value - The value to be examined as a number.
+		 * @returns {boolean}
+		 */
+		function isNumber(value) {
+			return !isNaN(parseFloat(value)) && isFinite(value);
 		}
 
 		/**
