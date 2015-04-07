@@ -4,7 +4,7 @@
  * MilkSold module.
  * @module farmBuildNutrientCalculator/MilkSold
  */
-angular.module('farmBuildNutrientCalculator')
+angular.module('farmBuildNutrientCalculator', ['farmBuildNutrientCalculator.version'])
 
 	.factory('MilkSold', function () {
 		var milkSoldAPI = {};
