@@ -19,7 +19,7 @@ describe('Farm web nutrient calculator', function() {
 
     it('should render sample when user navigates to /milk-sold', function() {
       expect(element.all(by.css('body h3')).first().getText()).
-        toMatch('Farm Web Nutrient Calculator');
+        toMatch('Farm Build Nutrient Calculator');
     });
 
   });
