@@ -7,7 +7,7 @@ describe('Farm web nutrient calculator', function() {
   describe('milk-sold', function() {
 
     beforeEach(function() {
-      browser.get('milk-sold.html');
+      browser.get('milk-sold/milk-sold.html');
     });
 
     it('should render sample when user navigates to /milk-sold.html', function() {
