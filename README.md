@@ -57,3 +57,5 @@ npm start
 ```
 
 Now browse to the app at `http://localhost:8000/app/examples/milk-sold.html`.
+
+[![Build Status](https://api.travis-ci.org/SpatialVision/farm-build-nutrient-calculator.svg?branch=master)](https://travis-ci.org/SpatialVision/farm-build-nutrient-calculator)
