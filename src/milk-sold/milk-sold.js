@@ -23,6 +23,10 @@ angular.module('farmBuildNutrientCalculator')
 				return;
 			}
 
+			if(milkProteinPercentage + milkFatPercentage > 100){
+				return;
+			}
+
 			milkProteinInKg = percentageToKg(milkProteinPercentage, milkSoldPerYearInLitre);
 			milkFatInKg = percentageToKg(milkFatPercentage, milkSoldPerYearInLitre);
 			return nutrientInMilkSold(milkSoldPerYearInLitre, milkFatInKg, milkProteinInKg, milkProteinPercentage, milkFatPercentage);
@@ -40,6 +44,10 @@ angular.module('farmBuildNutrientCalculator')
 			var milkProteinPercentage, milkFatPercentage;
 
 			if (!milkSoldPerYearInLitre || !milkFatInKg || !milkProteinInKg) {
+				return;
+			}
+
+			if(milkFatInKg + milkProteinInKg > milkSoldPerYearInLitre){
 				return;
 			}
 
