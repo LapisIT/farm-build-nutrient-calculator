@@ -17,12 +17,11 @@ its package manager (npm) installed.  You can get them from [http://nodejs.org/]
 
 ### Clone Farm Build Nutrient Calculator Prototype
 
-Clone the Farm Build Nutrient Calculator Prototype repository using [git][git]:
+Clone the Farm Build Nutrient Calculator Prototype repository using [git]:
 
-```
-git clone https://github.com/angular/farm-build-nutrient-calculator.git
-cd farm-build-nutrient-calculator
-```
+```git clone https://github.com/angular/farm-build-nutrient-calculator.git```
+
+```cd farm-build-nutrient-calculator```
 
 ### Install Dependencies
 
@@ -40,7 +39,7 @@ Behind the scenes this will also call `bower install`.  You should find that you
 folders in your project.
 
 * `node_modules` - contains the npm packages for the tools we need
-* `app/bower_components` - contains the angular framework files
+* `bower_components` - contains the angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but
 Farm Build Nutrient Calculator Prototype changes this location through the `.bowerrc` file.
