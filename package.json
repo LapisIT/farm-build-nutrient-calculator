@@ -1,7 +1,7 @@
 {
   "name": "Farm_Build_Nutrient_Calculator_Prototype",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "This project is a prototype application to show the complete cycle of development, test and qa in farm build project",
   "repository": "https://github.com/SpatialVision/farm-build-nutrient-calculator",
   "license": "MIT",
