@@ -5,7 +5,7 @@ This project is a sample to show the complete cycle of development, test and qa 
 
 ## Getting Started
 
-To get you started simply download this repository using "Download Zip" on the right side of this page. Unzip the downloaded folder and navigate to "examples" and open "milk-sold.html"
+To get you started simply download this repository using "Download Zip" on the right side of this page. Unzip the downloaded folder and navigate to "examples" and open ["milk-sold.html"](https://cdn.rawgit.com/SpatialVision/farm-build-nutrient-calculator/master/examples/milk-sold/milk-sold.html)
 in a browser (preferably chrome or firefox).
 
 [API documentation](https://cdn.rawgit.com/SpatialVision/farm-build-nutrient-calculator/master/docs/Farm_Build_Nutrient_Calculator_Prototype/0.0.1/index.html)
