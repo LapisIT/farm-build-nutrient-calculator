@@ -20,6 +20,7 @@
     "encoding": "utf8",
     "private": true,
     "recurse": true,
+    "verbose": true,
     "template": "./node_modules/minami"
   }
 }
