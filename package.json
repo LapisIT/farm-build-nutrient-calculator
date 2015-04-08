@@ -14,7 +14,8 @@
     "karma-junit-reporter": "^0.2.2",
     "minami": "~1.1.0",
     "jsdoc": "3.3.0-beta3",
-    "uglify-js": "2.4.19"
+    "uglify-js": "2.4.19",
+    "jshint":"2.6.3"
   },
   "scripts": {
     "postinstall": "bower install",
@@ -35,6 +36,8 @@
     "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + sed(/sourceMappingURL=angular-loader.min.js.map/,'sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map','app/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'app/index-async.html');\"",
 
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json",
+
+    "jshint": " node_modules/.bin/jshint -c .jshintrc --filename src/**/*-src.js --verbose --show-non-errors",
 
     "dist": "uglifyjs src/**/*-src.js --source-map dist/api.min.js.map --source-map-url api.min.js.map -o dist/api.min.js -v -c -m"
 
