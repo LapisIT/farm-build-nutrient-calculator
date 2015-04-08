@@ -36,6 +36,7 @@
 
     "generate-docs": "node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
 
-    "dist": "uglifyjs src/**/milk-sold.js src/**/interpolate-filter.js src/**/version.js src/**/version-directive.js  -o dist/api.js --verbose"
+    "dist": "uglifyjs src/**/*-src.js --source-map dist/api.min.js.map --source-map-url api.min.js.map -o dist/api.min.js -v -c -m"
+
   }
 }
