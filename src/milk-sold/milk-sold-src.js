@@ -31,7 +31,7 @@ angular.module('farmBuild.nutrientCalculator')
 		MilkSold.nutrientOfMilkSoldByPercent = function(milkSoldPerYearInLitre, milkProteinPercentage, milkFatPercentage) {
 			var milkProteinInKg, milkFatInKg;
 
-			ga('send', 'nutrientOfMilkSoldByPercent');
+			//ga('send', 'nutrientOfMilkSoldByPercent');
 
 			if (!milkSoldPerYearInLitre || !milkProteinPercentage || !milkFatPercentage) {
 				return undefined;
