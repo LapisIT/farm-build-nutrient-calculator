@@ -2,9 +2,9 @@
 
 angular.module('farmBuild.nutrientCalculator.examples.milkSold', ['farmBuild.nutrientCalculator'])
 
-	.controller('MilkSoldCtrl', function ($scope, MilkSold, GA) {
+	.controller('MilkSoldCtrl', function ($scope, MilkSold, GoogleAnalytic) {
 
-		GA.username = 'Parham';
+		GoogleAnalytic.username = 'SpatialVision';
 
 		$scope.result =  {
 				milkSoldPerYearInLitre: '-',

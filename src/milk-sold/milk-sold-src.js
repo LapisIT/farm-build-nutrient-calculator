@@ -31,6 +31,8 @@ angular.module('farmBuild.nutrientCalculator')
 		MilkSold.nutrientOfMilkSoldByPercent = function(milkSoldPerYearInLitre, milkProteinPercentage, milkFatPercentage) {
 			var milkProteinInKg, milkFatInKg;
 
+			ga('send', 'nutrientOfMilkSoldByPercent');
+
 			if (!milkSoldPerYearInLitre || !milkProteinPercentage || !milkFatPercentage) {
 				return undefined;
 			}
@@ -154,6 +156,7 @@ angular.module('farmBuild.nutrientCalculator')
 			return !isNaN(parseFloat(value)) && isFinite(value);
 		}
 
+		window.farmbuild.nutrientcalculator.MilkSold = MilkSold;
 		return MilkSold;
 
 	});
