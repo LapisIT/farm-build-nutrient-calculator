@@ -6,3 +6,4 @@ angular.module('farmBuild.nutrientCalculator.version', [
 ])
 
 .value('version', '0.1');
+
