@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('farmBuildNutrientCalculator.version.interpolate-filter', [])
+angular.module('farmBuild.nutrientCalculator.version.interpolate-filter', [])
 
 .filter('interpolate', ['version', function(version) {
   return function(text) {

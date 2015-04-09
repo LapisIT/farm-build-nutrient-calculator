@@ -1,7 +1,7 @@
 'use strict';
 
-describe('farmBuildNutrientCalculator.version module', function() {
-  beforeEach(module('farmBuildNutrientCalculator.version'));
+describe('farmBuild.nutrientCalculator.version module', function() {
+  beforeEach(module('farmBuild.nutrientCalculator.version'));
 
   describe('app-version directive', function() {
     it('should print current version', function() {

@@ -9,24 +9,26 @@
 'use strict';
 
 /**
- * MilkSold module
- * @module MilkSold
+ * nutrientCalculator/MilkSold class
+ * @module nutrientCalculator/MilkSold
  */
-angular.module('farmBuildNutrientCalculator', ['farmBuildNutrientCalculator.version'])
+angular.module('farmBuild.nutrientCalculator')
 
 	.factory('MilkSold', function () {
 
-		var exports = {};
+		var MilkSold = {};
 
 		/**
 		 * Calculates nutrient from milk sold, input values are in percentage
+		 * @method nutrientOfMilkSoldByPercent
 		 * @param {!number} milkSoldPerYearInLitre - Quantity of milk sold in a year in litre
 		 * @param {!number} milkProteinPercentage - Percentage of milk protein
 		 * @param {!number} milkFatPercentage - Percentage of milk fat
 		 * @returns {object} milk nutrient data
 		 * @public
+		 * @static
 		 */
-		exports.nutrientOfMilkSoldByPercent = function(milkSoldPerYearInLitre, milkProteinPercentage, milkFatPercentage) {
+		MilkSold.nutrientOfMilkSoldByPercent = function(milkSoldPerYearInLitre, milkProteinPercentage, milkFatPercentage) {
 			var milkProteinInKg, milkFatInKg;
 
 			if (!milkSoldPerYearInLitre || !milkProteinPercentage || !milkFatPercentage) {
@@ -49,13 +51,15 @@ angular.module('farmBuildNutrientCalculator', ['farmBuildNutrientCalculator.vers
 
 		/**
 		 * Calculates nutrient from milk sold, input values are in Kg
+		 * @method nutrientOfMilkSoldByKg
 		 * @param {!number} milkSoldPerYearInLitre - Quantity of milk sold in a year in litre
 		 * @param {!number} milkFatInKg - Quantity of milk fat in Kilograms
 		 * @param {!number} milkProteinInKg - Quantity of milk protein in Kilograms
 		 * @returns {object} milk nutrient data
 		 * @public
+		 * @static
 		 */
-		exports.nutrientOfMilkSoldByKg = function(milkSoldPerYearInLitre, milkProteinInKg, milkFatInKg) {
+		MilkSold.nutrientOfMilkSoldByKg = function(milkSoldPerYearInLitre, milkProteinInKg, milkFatInKg) {
 			var milkProteinPercentage, milkFatPercentage;
 
 			if (!milkSoldPerYearInLitre || !milkFatInKg || !milkProteinInKg) {
@@ -78,6 +82,7 @@ angular.module('farmBuildNutrientCalculator', ['farmBuildNutrientCalculator.vers
 
 		/**
 		 * Returns nutrient data of milk
+		 * @method _nutrientInMilkSold
 		 * @param {!number} milkSoldPerYearInLitre - Quantity of milk sold in a year in litre
 		 * @param {!number} milkFatInKg - Quantity of milk fat in Kilograms
 		 * @param {!number} milkProteinInKg - Quantity of milk protein in Kilograms.
@@ -116,6 +121,7 @@ angular.module('farmBuildNutrientCalculator', ['farmBuildNutrientCalculator.vers
 
 		/**
 		 * Returns nutrient value in percentage
+		 * @method _kgToPercentage
 		 * @param {!number} valueInKg - Quantity of milk protein in Kilograms
 		 * @param {!number} totalInLitre - Percentage of milk protein
 		 * @returns {number} nutrient value in percentage
@@ -127,6 +133,7 @@ angular.module('farmBuildNutrientCalculator', ['farmBuildNutrientCalculator.vers
 
 		/**
 		 * Returns nutrient value in Kg
+		 * @method _percentageToKg
 		 * @param {!number} valuePercentage - Quantity of milk protein in Kilograms
 		 * @param {!number} totalInLitre - Percentage of milk protein
 		 * @returns {number} nutrient value in Kg
@@ -137,7 +144,8 @@ angular.module('farmBuildNutrientCalculator', ['farmBuildNutrientCalculator.vers
 		}
 
 		/**
-		 * Returns true if value is a !number
+		 * Returns true if value is a number
+		 * @method _isNumber
 		 * @param {!number} value - The value to be examined as a number
 		 * @returns {boolean}
 		 * @private
@@ -146,6 +154,6 @@ angular.module('farmBuildNutrientCalculator', ['farmBuildNutrientCalculator.vers
 			return !isNaN(parseFloat(value)) && isFinite(value);
 		}
 
-		return exports;
+		return MilkSold;
 
 	});

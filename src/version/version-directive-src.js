@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('farmBuildNutrientCalculator.version.version-directive', [])
+angular.module('farmBuild.nutrientCalculator.version.version-directive', [])
 
 .directive('appVersion', ['version', function(version) {
   return function(scope, elm, attrs) {

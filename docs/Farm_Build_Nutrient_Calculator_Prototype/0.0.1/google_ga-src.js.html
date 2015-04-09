@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>google/ga-src.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -28,34 +28,38 @@
 
 <div id="main">
     
+    <h1 class="page-title">google/ga-src.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
 
+/**
+ * nutrientCalculator/GA class
+ * @module nutrientCalculator/GA
+ */
+angular.module('farmBuild.nutrientCalculator', ['farmBuild.nutrientCalculator.version'])
 
+	.factory('GA', function () {
 
+		var exports = {};
 
+		/**
+		* @property {string} ga.username - Username of the api user
+		 * @public
+		*/
+		exports.username = 'anonymous';
 
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>Farm Build Nutrient Calculator Prototype</h1><p>This project is a sample to show the complete cycle of development, test and qa in farm build project.</p>
-<h2>Getting Started</h2><p>To get you started simply download this repository using <a href="https://github.com/SpatialVision/farm-build-nutrient-calculator/archive/master.zip" target="_blank">&quot;Download Zip&quot;</a> on the right side of this page. Unzip the downloaded folder and navigate to &quot;examples&quot; and open <a href="https://cdn.rawgit.com/SpatialVision/farm-build-nutrient-calculator/master/examples/milk-sold/milk-sold.html" target="_blank">&quot;milk-sold.html&quot;</a>
-in a browser (preferably chrome or firefox).</p>
-<p><a href="https://cdn.rawgit.com/SpatialVision/farm-build-nutrient-calculator/master/docs/Farm_Build_Nutrient_Calculator_Prototype/0.0.1/index.html" target="_blank">API documentation</a></p>
-<p>For more information about API and Testing see the <a href="https://github.com/SpatialVision/farm-build-nutrient-calculator/wiki">Wiki</a> section.</p>
-<p><a href="https://travis-ci.org/SpatialVision/farm-build-nutrient-calculator"><img src="https://api.travis-ci.org/SpatialVision/farm-build-nutrient-calculator.svg?branch=master" alt="Build Status"></a></p></article>
+		return exports;
+	});</code></pre>
+        </article>
     </section>
-
-
 
 
 

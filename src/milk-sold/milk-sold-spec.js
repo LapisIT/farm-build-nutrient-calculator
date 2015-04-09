@@ -1,8 +1,8 @@
 'use strict';
 
-describe('farmBuildNutrientCalculator module', function() {
+describe('farmBuild.nutrientCalculator module', function() {
 
-  beforeEach(module('farmBuildNutrientCalculator'));
+  beforeEach(module('farmBuild.nutrientCalculator'));
 
   describe('MilkSold controller and factory', function(){
     it('MilkSold should be defined', inject(function($controller, MilkSold) {

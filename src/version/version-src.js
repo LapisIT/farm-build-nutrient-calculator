@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('farmBuildNutrientCalculator.version', [
-  'farmBuildNutrientCalculator.version.interpolate-filter',
-  'farmBuildNutrientCalculator.version.version-directive'
+angular.module('farmBuild.nutrientCalculator.version', [
+  'farmBuild.nutrientCalculator.version.interpolate-filter',
+  'farmBuild.nutrientCalculator.version.version-directive'
 ])
 
 .value('version', '0.1');

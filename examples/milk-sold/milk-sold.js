@@ -1,8 +1,11 @@
 'use strict';
 
-angular.module('farmBuildNutrientCalculator')
+angular.module('farmBuild.nutrientCalculator.examples.milkSold', ['farmBuild.nutrientCalculator'])
 
-	.controller('MilkSoldCtrl', function ($scope, MilkSold) {
+	.controller('MilkSoldCtrl', function ($scope, MilkSold, GA) {
+
+		GA.username = 'Parham';
+
 		$scope.result =  {
 				milkSoldPerYearInLitre: '-',
 				milkFatInKg: '-',
@@ -18,6 +21,7 @@ angular.module('farmBuildNutrientCalculator')
 				sulphurInKg: '-',
 				sulphurPercentage: '-'
 			};
+
 		$scope.nutrientOfMilkSoldByPercent = function (milkSoldPerYearInLitre, milkProteinPercentage, milkFatPercentage) {
 			$scope.result = MilkSold.nutrientOfMilkSoldByPercent(milkSoldPerYearInLitre, milkProteinPercentage, milkFatPercentage);
 			if ($scope.result) {
@@ -25,6 +29,7 @@ angular.module('farmBuildNutrientCalculator')
 				$scope.milkProteinInKg = $scope.result.milkProteinInKg;
 			}
 		};
+
 		$scope.nutrientOfMilkSoldByKg = function (milkSoldPerYearInLitre, milkProteinInKg, milkFatInKg) {
 			$scope.result = MilkSold.nutrientOfMilkSoldByKg(milkSoldPerYearInLitre, milkProteinInKg, milkFatInKg);
 			if ($scope.result) {
