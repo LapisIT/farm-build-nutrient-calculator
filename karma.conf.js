@@ -7,8 +7,10 @@ module.exports = function(config){
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'src/api-define.js',
-      'src/**/*-spec.js',
-      'src/api-init.js'
+      'src/google-analytic/google-analytic-src.js',
+      'src/milk-sold/milk-sold-src.js',
+      'src/api-init.js',
+      'src/**/*.js'
     ],
 
     autoWatch : true,
