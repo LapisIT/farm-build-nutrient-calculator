@@ -2,6 +2,10 @@
 
 angular.module('farmBuild.nutrientCalculator.examples.milkSold', ['farmBuild.nutrientCalculator'])
 
+	.run(function($rootScope){
+		$rootScope.appVersion = farmbuild.nutrientcalculator.sampleCodeVersion;
+	})
+
 	.controller('MilkSoldCtrl', function ($scope, MilkSold, GoogleAnalytic) {
 
 		GoogleAnalytic.username = 'SpatialVision';

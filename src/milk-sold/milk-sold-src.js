@@ -35,8 +35,6 @@ angular.module('farmBuild.nutrientCalculator')
 			milkProteinPercentage = parseFloat(milkProteinPercentage);
 			milkFatPercentage = parseFloat(milkFatPercentage);
 
-			//ga('send', 'nutrientOfMilkSoldByPercent');
-
 			if (!milkSoldPerYearInLitre || !milkProteinPercentage || !milkFatPercentage) {
 				return undefined;
 			}
