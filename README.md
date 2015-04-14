@@ -1,3 +1,5 @@
+This library is moved to [https://github.com/FarmBuild/farmbuild-dairy-nutrient-calculator](https://github.com/FarmBuild/farmbuild-dairy-nutrient-calculator)
+
 #Farm Build Nutrient Calculator Prototype
 
 This project is a sample to show the complete cycle of development, test and qa in farm build project.
